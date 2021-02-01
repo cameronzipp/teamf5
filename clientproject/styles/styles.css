@@ -1,0 +1,101 @@
+body {
+    font-family: SansSerif;
+    width: 100%;
+}
+
+
+.err {
+    color:darkred;
+    display:none;
+}
+
+
+form {
+    margin: 0 auto;
+    width:90%;
+}
+
+fieldset {
+    background-color: #8eb63f;
+    color: white;
+
+}
+
+.jumbotron {
+    text-align: center;
+}
+
+.form-control {
+    width:90%;
+    margin: 0 auto;
+}
+
+.form-select {
+    width:90%;
+    margin: 0 auto;
+}
+
+.form-label {
+    padding-left:85px;
+    margin: 0 auto;
+}
+
+label.cInfo{
+    padding-left: 20px;
+}
+
+label.oInfo{
+    padding-left: 40px;
+}
+
+legend {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+
+.mainContainer {
+    padding: 0 15px;
+    clear: both;
+    margin: 0 auto;
+    background: #242424 no-repeat 0 0;
+    font-size: 20px;
+}
+
+.mainContainer ul{
+    padding-left: 41%;
+}
+
+.mainContainer a {
+    text-decoration: none;
+    color: white;
+}
+
+.mainContainer li {
+    padding:10px;
+}
+
+.conyFooter {
+    background: #242424 no-repeat 0 0;
+    color: white;
+    clear: both;
+    padding: 53px 0 44px 0;
+    margin: 50px 0 0;
+    overflow: auto;
+}
+
+.footerSubMenu-1, .footerSubMenu-2, .footerSubMenu-3, .footerSubMenu-4 {
+    display: block;
+    float: left;
+    width: 20%;
+    min-width: 250px;
+    padding: 2%;
+}
+
+.footerBottom {
+    background-color: #141414;
+    color: #656565;
+    margin: 0;
+}
+

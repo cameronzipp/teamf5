@@ -2,63 +2,94 @@ body {
     font-family: SansSerif;
     width: 100%;
 }
-.err {
-    color:darkred;
-    display:none;
-}
-form {
-    margin: 0 auto;
-    width:90%;
-}
-fieldset {
-    background-color: #8eb63f;
-    color: white;
-}
-.jumbotron {
-    text-align: center;
-}
-.form-control {
-    width:90%;
-    margin: 0 auto;
-}
-.form-select {
-    width:90%;
-    margin: 0 auto;
-}
-.form-label {
-    padding-left:85px;
-    margin: 0 auto;
-}
-label.cInfo{
-    padding-left: 20px;
-}
-label.oInfo{
-    padding-left: 40px;
-}
-legend {
-    text-transform: uppercase;
-    text-align: center;
-}
 .mainContainer {
-    padding: 0 15px;
+    padding: 0 10px;
     clear: both;
     margin: 0 auto;
     background: #242424 no-repeat 0 0;
     font-size: 20px;
 }
 .mainContainer ul{
-    padding-left: 41%;
+    padding-left: 10%;
 }
 .mainContainer a {
     text-decoration: none;
     color: white;
 }
-.mainContainer li {
-    padding:10px;
+.jumbotron {
+    text-align: center;
+}
+div {
+    display: block;
+}
+.conyFooter {
+    background: #242424 no-repeat 0 0;
+    color: #818181;
+    clear: both;
+    padding: 53px 0 44px 0;
+    margin: auto;
+    overflow: auto;
+}
+.footerSubMenu-1, .footerSubMenu-2, .footerSubMenu-3, .footerSubMenu-4 {
+    display: block;
+    float: left;
+    width: 20%;
+    min-width: 250px;
+    padding: 2%;
+}
+.err {
+    color:darkred;
+    display:none;
+}
+.wpcf7-form-control-wrap {
+    width: 100%;
+}
+.col-md-6, .col-md-2, .col-md-4 {
+    width: 33%;
+    float: left;
+    padding: 3%;
+    padding-bottom: 0%;
+    display: block;
+    align-content: center;
+    border-color: black;
+}
+fieldset:last-of-type .col, fieldset:first-of-type .col {
+    min-width: 240px;
+}
+.form-check {
+    float: left;
+}
+form#orgForm {
+    text-shadow: 1px 1px #303030;
+    background-color: #8eb63f;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    padding: 5px;
+    color: white;
+    overflow: auto;
+}
+.btn-primary {
+    float: right;
+    margin: auto;
 }
 .footerBottom {
-    text-align: center;
     background-color: #141414;
     color: #656565;
-    margin: 0;
+    padding-bottom: 20px;
+    text-align: center;
+}
+#phone {
+    border-radius: 5px;
+    padding-bottom: inherit;
+}
+label {
+    font-size: 20px;
+}
+fieldset, fieldset.div {
+
+}
+legend {
+    text-transform: uppercase;
+    text-align: center;
 }

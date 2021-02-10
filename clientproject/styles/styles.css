@@ -1,6 +1,10 @@
+/*General*/
 body {
     font-family: SansSerif;
     width: 100%;
+}
+div {
+    display: block;
 }
 .mainContainer {
     padding: 0 10px;
@@ -16,12 +20,20 @@ body {
     text-decoration: none;
     color: white;
 }
+.col-md-6, .col-md-2, .col-md-4 {
+    width: 33%;
+    float: left;
+    padding: 0%;
+    padding-bottom: 0%;
+    display: block;
+    align-content: center;
+    border-color: black;
+}
+/*Header*/
 .jumbotron {
     text-align: center;
 }
-div {
-    display: block;
-}
+/*Footer*/
 .conyFooter {
     background: #242424 no-repeat 0 0;
     color: #818181;
@@ -37,21 +49,91 @@ div {
     min-width: 250px;
     padding: 2%;
 }
+.footerBottom {
+    background-color: #141414;
+    color: #656565;
+    padding-bottom: 20px;
+    text-align: center;
+}
+/*Index*/
+#whatIs p {
+    font-size: 24px;
+    text-align: center;
+}
+#categoryList li {
+    list-style-type: none;
+    clear: left;
+}
+#categoryList li img, #categoryList li h2 {
+    float: left;
+    font-size: 20px;
+}
+#categoryList a:link, #categoryList a:visited {
+    text-decoration: none;
+    color: forestgreen;
+}
+#categoryList a:hover {
+    text-decoration: underline;
+    color: darkgreen;
+}
+#categoryList p {
+    font-size: 30px;
+}
+#categoryList .col {
+    min-width: 240px;
+    color: black;
+}
+/*About*/
+.aboutSide {
+    text-align: center;
+}
+/*Nav*/
+.navbar {
+    width: 90%;
+    /*background-color: #555;*/
+    overflow: auto;
+}
+/*Categories*/
+#catAgriculture h1 {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+#catAgriculture ul li {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 3px;
+    background-color: white;
+    list-style-type: none;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(156, 252, 0, 0.5);
+}
+#catAgriculture p {
+    font-size: 20px;
+}
+#catAgriculture a:link, #catAgriculture a:visited {
+    text-decoration: none;
+    color: mediumblue;
+}
+#catAgriculture a:hover {
+    text-decoration: underline;
+    color: darkblue;
+}
+/*Form*/
+#orgForm {
+    /*background-color: #cccccf;*/
+}
+#aboutText p {
+    text-align: center;
+    font-size: 24px;
+}
 .err {
     color:darkred;
     display:none;
 }
 .wpcf7-form-control-wrap {
     width: 100%;
-}
-.col-md-6, .col-md-2, .col-md-4 {
-    width: 33%;
-    float: left;
-    padding: 3%;
-    padding-bottom: 0%;
-    display: block;
-    align-content: center;
-    border-color: black;
 }
 fieldset:last-of-type .col, fieldset:first-of-type .col {
     min-width: 240px;
@@ -60,24 +142,30 @@ fieldset:last-of-type .col, fieldset:first-of-type .col {
     float: left;
 }
 form#orgForm {
-    text-shadow: 1px 1px #303030;
-    background-color: #8eb63f;
-    border-radius: 5px;
-    border-style: solid;
-    border-color: black;
+    /*text-shadow: 1px 1px #303030;*/
+    /*border-radius: 5px;*/
+    /*border-style: solid;*/
+    /*border-color: #050505;*/
+    /*
     padding: 5px;
-    color: white;
+    */
+    color: black;
     overflow: auto;
 }
-.btn-primary {
-    float: right;
-    margin: auto;
+form#orgForm .row {
+    /*background-color: rgb(186, 186, 252);*/
+    padding-bottom: 10px;
 }
-.footerBottom {
-    background-color: #141414;
-    color: #656565;
-    padding-bottom: 20px;
-    text-align: center;
+#orgForm .col {
+    min-width: 240px;
+}
+fieldset {
+    background-color: rgba(156, 252, 0, 0.5);
+    border-style: solid;
+    /*border-color: #141414;*/
+}
+.btn-primary {
+    margin: auto;
 }
 #phone {
     border-radius: 5px;

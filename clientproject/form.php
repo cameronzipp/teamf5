@@ -1,4 +1,3 @@
-<!--Include Head.html-->
 <?php
 //Turn on error reporting
 ini_set('display_errors', 1);
@@ -7,9 +6,9 @@ error_reporting(E_ALL);
 include('includes/head.html');
 ?>
 <body>
-<!--Include Header.html-->
+
 <?php
-include('includes/header.html') ;
+include('includes/header.html');
 ?>
 
 <br>
@@ -27,7 +26,7 @@ include('includes/header.html') ;
                 <div class="col">
                     <!-- Company Name -->
                     <div class="form-group">
-                        <label for="oname" class="oInfo">Organization Name *</label>
+                        <label for="oname" class="oInfo"> Organization Name *</label>
                         <input type="text" class="form-control" placeholder="Organization name" id="oname" name="oname">
                         <span class="err" id="err-oname">Please enter an organization name</span>
                     </div>
@@ -35,9 +34,10 @@ include('includes/header.html') ;
                 <div class="col">
                     <!-- Website Name -->
                     <div class="form-group">
-                        <label for="website" class="oInfo">Website *</label>
-                        <input type="text" class="form-control" placeholder="website.com" id="website" name="website">
-                        <span class="err" id="err-website">Please enter an website</span>
+                        <label for="website" class="oInfo"> Website *</label>
+                        <input type="text" class="form-control" placeholder="http(s)://website.com" id="website" name="website">
+                        <span class="err" id="err-website">Please enter a website Must Start with an 'http(s)://'
+                            <br> and end with .com, .io, .us, .uk, .org, .gov, or .gg</span>
                     </div>
                 </div>
             </div>
@@ -45,22 +45,25 @@ include('includes/header.html') ;
             <div class="row">
                 <div class="col">
                     <div class="form-group">
-                        <label for="about">Enter your companies tagline <small>(Character Limit: 150)</small></label>
+                        <label for="about"> Enter your companies tagline <br><small>(Character Limit: 250)</small></label>
                         <textarea class="form-control" rows="1" id="about" placeholder="Company Tagline" name="about"></textarea>
                     </div>
                 </div>
                 <div class="col">
                     <div class="form-group">
-                        <label for="imgUpload" class="cInfo">Upload an image of your logo</label>
+                        <label for="imgUpload" class="cInfo"> Upload an image of your logo<br><small>Acceptable: png, tif, bmp, jpeg</small></label>
                         <input type="file" value="Upload Image" class="form-control" name="imgUpload" id="imgUpload">
+                        <span class="err" id="err-img">Please upload a photo
+                            <br>Acceptable Formats: .png, .tif, .tiff, .bmp, .jpg, .jpeg</span>
                     </div>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col">
                     <!-- Category -->
                     <div class="form-group">
-                        <label for="category" class="oInfo">Category *</label>
+                        <label for="category" class="oInfo"> Category *</label>
                         <select id="category" name="category" class="form-control">
                             <option value="none">Select a category</option>
                             <option value="agriculture">Agriculture</option>
@@ -77,16 +80,41 @@ include('includes/header.html') ;
                             <option value="transportation">Transportation</option>
                             <option value="wastewater">Wastewater</option>
                             <option value="water">Water</option>
+                            <option value="other">Other</option>
                         </select>
-                        <span class="err" id="err-category">Please enter an category</span>
+                        <span class="err" id="err-category">Please enter a category</span>
                     </div>
                 </div>
                 <div class="col">
+                    <div class="form-group">
+                        <label for="keywords">Enter keywords: <small>(Style: #Keyword)</small></label>
+                        <textarea class="form-control" rows="1" id="keywords" placeholder="#Keyword #Key word2 #Key word 3" name="keywords"></textarea>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <br>
+        <!-- Contact Info -->
+        <fieldset class="form-group border p-2">
+            <legend>Company Contact Info</legend>
+            <p class="aboutSide">This section is not required, but if provided will be included in the catalog. </p>
+
+            <div class="row">
+                <div class="col">
                     <!-- Email -->
                     <div class="form-group">
-                        <label for="cemail" class="oInfo">Company Email *</label>
+                        <label for="cemail" class="oInfo"> Company Email</label>
                         <input type="text" class="form-control" placeholder="companyemailhere@email.com" id="cemail" name="cemail">
-                        <span class="err" id="err-cemail">Please enter an email</span>
+                        <!--<span class="err" id="err-cemail">Please enter an email with an @ and a .com</span>-->
+                    </div>
+                </div>
+                <div class="col">
+                    <!--Phone-->
+                    <div class="form-group">
+                        <label for="phone" class="cInfo">Phone #</label>
+                        <input type="text" class="form-control" placeholder="###-###-####" id="phone" name="phone">
+                        <!--<span class="err" id="err-phone">Please enter a Phone Number in the style (###-###-####)</span>-->
                     </div>
                 </div>
             </div>
@@ -99,95 +127,57 @@ include('includes/header.html') ;
 
             <div class="row">
                 <div class="col">
-                    <label for="inputCity" class="form-label">City</label>
+                    <label for="inputCity" class="form-label">City *</label>
                     <input type="text" class="form-control" id="inputCity" placeholder="City" name="inputCity">
+                    <span class="err" id="err-city">Please enter a city</span>
                 </div>
                 <div class="col">
                     <label for="inputState" class="form-label">State *</label>
-                    <select id="inputState" class="form-select" name="inputState">
-                        <option selected="">Choose...</option>
-                        <option value="Alabama">Alabama</option>
-                        <option value="Alaska">Alaska</option>
-                        <option value="Arizona">Arizona</option>
-                        <option value="Arkansas">Arkansas</option>
-                        <option value="California">California</option>
-                        <option value="Colorado">Colorado</option>
-                        <option value="Connecticut">Connecticut</option>
-                        <option value="Delaware">Delaware</option>
-                        <option value="Florida">Florida</option>
-                        <option value="Georgia">Georgia</option>
-                        <option value="Hawaii">Hawaii</option>
-                        <option value="Idaho">Idaho</option>
-                        <option value="Illinois">Illinois</option>
-                        <option value="Indiana">Indiana</option>
-                        <option value="Iowa">Iowa</option>
-                        <option value="Kansas">Kansas</option>
-                        <option value="Kentucky">Kentucky</option>
-                        <option value="Louisiana">Louisiana</option>
-                        <option value="Maine">Maine</option>
-                        <option value="Maryland">Maryland</option>
-                        <option value="Massachusetts">Massachusetts</option>
-                        <option value="Michigan">Michigan</option>
-                        <option value="Minnesota">Minnesota</option>
-                        <option value="Mississippi">Mississippi</option>
-                        <option value="Missouri">Missouri</option>
-                        <option value="Montana">Montana</option>
-                        <option value="Nebraska">Nebraska</option>
-                        <option value="Nevada">Nevada</option>
-                        <option value="New Hampshire">New Hampshire</option>
-                        <option value="New Jersey">New Jersey</option>
-                        <option value="New Mexico">New Mexico</option>
-                        <option value="New York">New York</option>
-                        <option value="North Carolina">North Carolina</option>
-                        <option value="North Dakota">North Dakota</option>
-                        <option value="Ohio">Ohio</option>
-                        <option value="Oklahoma">Oklahoma</option>
-                        <option value="Oregon">Oregon</option>
-                        <option value="Pennsylvania">Pennsylvania</option>
-                        <option value="Rhode Island">Rhode Island</option>
-                        <option value="South Carolina">South Carolina</option>
-                        <option value="South Dakota">South Dakota</option>
-                        <option value="Tennessee">Tennessee</option>
-                        <option value="Texas">Texas</option>
-                        <option value="Utah">Utah</option>
-                        <option value="Vermont">Vermont</option>
-                        <option value="Virginia">Virginia</option>
-                        <option value="Washington">Washington</option>
-                        <option value="West Virginia">West Virginia</option>
-                        <option value="Wisconsin">Wisconsin</option>
-                        <option value="Wyoming">Wyoming</option>
-                        <option value="Other">Not from America</option>
-                    </select>
-                    <span class="err" id="err-state">Please enter a state</span>
+                    <input type="text" id="inputState" class="form-control" name="inputState" placeholder="State/Region">
+                    <span class="err" id="err-state">Please enter a state/Region</span>
                 </div>
                 <div class="col">
-                    <label for="inputCountry" class="form-label">Country</label>
+                    <label for="inputCountry" class="form-label"> Country *</label>
                     <input type="text" class="form-control" id="inputCountry" placeholder="Country" name="inputCountry">
+                    <span class="err" id="err-country">Please enter a Country</span>
+                </div>
+            </div>
+            <div class="row">
+                <p>Both of these are optional, but if Address is provided, it will be put on our map!</p>
+                <div class="col">
+                    <label for="inputAddress" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="Address" name="inputAddress">
                 </div>
                 <div class="col">
-                    <label for="inputZip" class="form-label">Zip</label>
+                    <label for="inputZip" class="form-label">Zip Code</label>
                     <input type="text" class="form-control" id="inputZip" placeholder="Zip Code" name="inputZip">
                 </div>
             </div>
-            <!--Geographical area served (local/regional, state, national, global)-->
             <div class="row">
+                <!--Geographical area served (local/regional, state, national, global)-->
                 <div class="col">
-                    <label for="areaServed" class="form-label">Area Served</label>
+                    <label for="areaServed" class="form-label"> Area Served *</label>
                     <select id="areaServed" class="form-control" name="areaServed">
                         <option value="localRegional">Local/Regional</option>
                         <option value="state">State</option>
                         <option value="national">National</option>
                         <option value="global">Global</option>
                     </select>
+                    <span class="err" id="err-serve">Please select an area served</span>
                 </div>
             </div>
         </fieldset>
 
         <br>
-        <!-- Contact Info -->
+        <!-- Point of Contact -->
         <fieldset class="form-group border p-2">
-            <legend>Contact Info</legend>
-            <p class="aboutSide">This person will be contacted regarding questions about their submission</p>
+            <legend>*Point of Contact*</legend>
+            <p class="aboutSide">This person will be contacted regarding questions about their submission.<br>
+                This section is required, but will not be included in the catalog. </p>
+            <span class="err" id="err-contact">Please fill out this section</span><br>
+            <span class="err" id="err-cEmail">Invalid email, please use an email that uses an @ and a .com</span><br>
+            <span class="err" id="err-cPhone">Invalid phone, must be in format ###-###-####</span>
+
             <div class="row">
                 <div class="col">
                     <!-- First Name -->
@@ -211,41 +201,39 @@ include('includes/header.html') ;
                     </div>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col">
+                    <!--Contact Title-->
+                    <div class="form-group">
+                        <label for="cTitle" class="cInfo">Contact Title</label>
+                        <input type="text" class="form-control" placeholder="Title" id="cTitle" name="cTitle">
+                    </div>
+                </div>
+                <div class="col">
+                    <!--Phone-->
+                    <div class="form-group">
+                        <label for="cPhone" class="cInfo">Phone #</label>
+                        <input type="text" class="form-control" placeholder="###-###-####" id="cPhone" name="cPhone">
+                    </div>
+                </div>
+            </div>
         </fieldset>
 
         <br>
-
         <!-- Check and submit buttons -->
         <div class="col-12">
             <button type="submit" class="btn btn-primary">Submit</button>
         </div>
+        <br>
+    </form>
 </div>
 
-    <!--When successfully submitted, have an alert thanking them
-    Submitting sends them to a page which has organized info-->
-    <!--Email function for successful form-->
-
-</form>
-
-<!--4 - When form is complete, have a section to upload a logo image-->
-
-<!--Include Footer.html-->
-
-<!-- Start of Conybear Footer -->
 <?php
 include('includes/footer.html');
 ?>
 
-<!-- Optional JavaScript; choose one of the two! -->
-
-<!-- Option 1: Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-<script src="../scripts/scripts.js"></script>
-
-<!-- Option 2: Separate Popper and Bootstrap JS -->
-<!--
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
--->
+<script src="scripts/scripts.js"></script>
 
 </body></html>

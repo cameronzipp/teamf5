@@ -1,0 +1,43 @@
+
+<!-- data print -->
+<div class="container">
+    <div class="row" id="main-text">
+        <div class="jumbotron" id="signUp">
+            <h1> <?php echo $name ?>, you are logged in as admin.</h1>
+            <form action="admin.php" method="get">
+                <div class="d-flex justify-content-center align-items-center container">
+                    <div class="row">
+                        <h3>Company : <?php echo $oname ?></h3>
+                        <h3>Website : <?php echo $website ?></h3>
+                        <h3>Email: <?php echo $cemail?></h3>
+                        <h3>Category: <?php echo $category ?></h3>
+                        <h3>Contact Info:  <?php echo $email?></h3>
+                        <button type="submit">Approve</button>
+                        <button type="submit">Reject</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- Start:Footer bottom -->
+
+<?php
+include('includes/footer.html');
+?>
+
+
+<!-- End:Footer bottom -->
+
+<!-- Optional JavaScript; choose one of the two! -->
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+-->
+
+</body></html>

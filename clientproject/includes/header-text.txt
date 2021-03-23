@@ -1,0 +1,50 @@
+<?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+//connect to database
+require ('includes/php-setup.php');
+$cnxn = connect();
+?>
+
+    <?php
+        //1. Define the base query
+        $sql = "SELECT category, name, about, url
+                FROM company ";
+
+        //echo "<p>GET:</p>";
+        //var_dump($_GET);
+
+        if (isset($_GET['category'])){
+        $category = $_GET['category'];
+        $sql .= " WHERE category = 'category'";
+        }
+        else if (isset($_GET['search'])) {
+        $searchTerm = $_GET['search'];
+        $sql .= " WHERE category LIKE '$searchTerm'
+        OR name LIKE '%$searchTerm%'
+        OR about LIKE '%$searchTerm%'";
+        }
+        $sql .= " ORDER BY category, name, about, url";
+        //echo "<p>$sql</p>";
+
+        //2. Send the query to the db
+        $result = mysqli_query($cnxn, $sql);
+
+        if (mysqli_num_rows($result) == 0) {
+        echo "<h2>No results found</h2>";
+        }
+
+        //3. Print the result
+        //var_dump($result);
+        foreach ($result as $row) {
+        //var_dump($row);
+
+        $category = $row['category'];
+        $name = $row['name'];
+        $about = $row['about'];
+        $url = $row['url'];
+
+        echo "<p>$name - $about $url (Category: $category)</p>";
+        }
+        ?>
